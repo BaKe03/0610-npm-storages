@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "addToGit": "git add .",
+    "commitToGit": "git commit -m",
+    "pushToGit": "git push -all"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1"
+  }
+}

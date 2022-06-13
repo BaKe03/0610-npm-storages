@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <script>
+        function setWhiteTheme() {
+            localStorage.setItem("theme", "light");
+            const root = document.getElementById("mainContainer");
+            root.className="light";
+        }
+        function setDarkTheme() {
+            localStorage.setItem("theme", "dark");
+            const root = document.getElementById("mainContainer");
+            root.className="dark";
+        }
+        function getValue() {
+            const theme = localStorage.getItem("theme");
+            const root = document.getElementById("mainContainer");
+            root.className = theme;
+        }
+        function setCookie = () => {
+            document.cookie = "user=Beibars; expires=Wed, 15 Jun 2022 23:59:59 GMT"
+        }
+    </script>
+    
+    <body onload="getValue()">
+        <div id="mainContainer" style="width:100vw; height:100vh;">
+            <h1>
+                <button onclick="setWhiteTheme()">Set light theme</button>
+                <button onclick="setDarkTheme()">Set dark theme</button>
+                <button onclick="setCookie()">Set cookie</button>
+            </h1>
+        </div>
+    </body>
+</html>
